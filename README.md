@@ -4,9 +4,10 @@
 ## 📁 File Structure
 ```markdown
 📁 /DesignFiles
-│   ├── Project Robotic Concept Design.pdf         # Complete design in PDF format
-│   └── TB3_FullAssembly.step      # Optional STEP file for 3D viewing or editing
-└── README.md
+│   ├── Project Robotic Concept Design.pdf   # Complete mechanical design (exported from SolidWorks 2024)
+│   ├── TB3_FullAssembly.step                # STEP file for 3D viewing/editing in CAD software
+│   └── Reflection.pdf                       # Reflection on the design and integration challenges
+└── README.md  
 ```
 ------
 ### 🤖 Overview
