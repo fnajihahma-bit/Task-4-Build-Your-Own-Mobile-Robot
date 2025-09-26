@@ -88,9 +88,8 @@ my_robot_description/
 
 ### ✅ Prerequisites
 
-ROS 2 Humble (or compatible)
-
-Gazebo (already included with ROS 2 desktop full)
+~ ROS 2 Humble (or compatible)
+~ Gazebo (already included with ROS 2 desktop full)
 
 Required packages:
 
@@ -118,14 +117,10 @@ git clone https://github.com/yourusername/my_robot_description.git
 File: urdf/my_robot.urdf.xacro
 
 This includes:
-
-Base box
-
-Left and right wheels (with joints)
-
-A LIDAR mounted on top
-
-ros2_control and transmission definitions
+~ Base box
+~ Left and right wheels (with joints)
+~ A LIDAR mounted on top
+~ ros2_control and transmission definitions
 
 ```bash
 <?xml version="1.0"?>
@@ -314,16 +309,11 @@ diff_cont:
 File: launch/my_robot_sim.launch.py
 
 This launch file:
-
-Starts Gazebo
-
-Spawns the robot
-
-Starts controller manager
-
-Activates the controllers
-
-Launches RViz2
+~ Starts Gazebo
+~ Spawns the robot
+~ Starts controller manager
+~ Activates the controllers
+~ Launches RViz2
 
 ```bash
 from launch import LaunchDescription
@@ -391,3 +381,31 @@ def generate_launch_description():
         ),
     ])
 ```
+
+5. Build the Workspace
+
+```bash
+cd ~/ros2_ws
+colcon build
+source install/setup.bash
+```
+
+6. Generate URDF from Xacro
+
+```bash
+ros2 run xacro xacro ~/ros2_ws/src/my_robot_description/urdf/my_robot.urdf.xacro -o /tmp/my_robot.urdf
+```
+
+7. Launch the Simulation
+
+```bash
+ros2 launch my_robot_description my_robot_sim.launch.py
+```
+
+🧪 Verify the LIDAR in RViz2
+
+Once RViz2 launches:
+
+~ Add display: LaserScan
+~ Topic: /scan
+~ Frame: lidar_link
