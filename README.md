@@ -78,11 +78,8 @@ my_robot_description/
 │   └── my_robot.rviz
 ├── launch/
 │   └── my_robot_sim.launch.py
-├── urdf/
-│   └── my_robot.urdf.xacro
-├── CMakeLists.txt
-└── package.xml
-
+└── urdf/
+    └── my_robot.urdf.xacro
 ```
 ------
 
@@ -107,11 +104,10 @@ sudo apt install \
 ```
 
 ### 🚀 Step-by-Step Instructions
-1. Clone the Project
+1. Setup the Project
 
 ```bash
 cd ~/ros2_ws/src
-git clone https://github.com/yourusername/my_robot_description.git
 ```
 
 2. Add the URDF
