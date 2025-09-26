@@ -1,5 +1,6 @@
-# Task-4-Build-Your-Own-Mobile-Robot
-(ROS2 Integrated)
+# Task-4-Build-Your-Own-Mobile-Robot (ROS2 Integrated)
+
+PART 1: Robot Concept Design
 
 ## 📁 File Structure
 ```markdown
@@ -64,6 +65,7 @@ It features a modular multi-tier architecture to accommodate sensors, computing 
 ~ 🔌 Power Module – Houses the battery and manages power distribution to all components.
 ```
 
+Part 2: URDF
 
 ### 🦾 My ROS 2 Robot Simulation with LIDAR
 
